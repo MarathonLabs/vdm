@@ -1,0 +1,13 @@
+[versions]
+vdm = "1.0.0"
+kotlin = "1.6.20"
+jvmTarget = "1.8"
+kotlinApi = "1.5"
+junit5 = "5.8.1"
+
+[libraries]
+junit5 = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
+
+[bundles]
+
+[plugins]
