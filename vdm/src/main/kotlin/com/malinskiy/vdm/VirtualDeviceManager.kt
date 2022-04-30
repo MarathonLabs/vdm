@@ -4,15 +4,16 @@
 
 package com.malinskiy.vdm
 
-import com.malinskiy.vdm.device.DeviceConfig
-import com.malinskiy.vdm.device.Location
+import com.malinskiy.vdm.device.Config
+import com.malinskiy.vdm.device.Id
 import com.malinskiy.vdm.device.VirtualDevice
 
 interface VirtualDeviceManager {
     fun browse(): List<VirtualDevice>
-    fun read(location: Location): VirtualDevice
-    fun update(location: Location, updatedConfig: DeviceConfig): VirtualDevice
-    fun add(config: DeviceConfig): VirtualDevice
-    fun delete(location: Location)
-    fun start(location: Location, options: StartupOptions)
+    fun read(id: Id): VirtualDevice
+    fun update(id: Id, updatedConfig: Config): VirtualDevice
+    fun add(config: Config): VirtualDevice
+    fun delete(id: Id)
+    fun start(id: Id, options: StartupOptions)
+    fun stop(device: VirtualDevice)
 }
