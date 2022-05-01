@@ -10,7 +10,6 @@ class AndroidVirtualDeviceProviderTest {
     
     private val deviceProvider = AndroidVirtualDeviceProvider()
     
-    
     @Test
     fun testBrowse() {
         deviceProvider.browse().forEach { println(it) }

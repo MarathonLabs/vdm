@@ -45,8 +45,7 @@ class AndroidVirtualDeviceProvider : VirtualDeviceProvider<AndroidVirtualDevice>
     }
 
     override fun start(device: AndroidVirtualDevice): Boolean {
-        avdManager.stopAvd(device.delegate)
-        return true
+        TODO("Not yet implemented")
     }
 
     override fun stop(device: AndroidVirtualDevice): Boolean {
