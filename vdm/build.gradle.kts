@@ -5,6 +5,11 @@ plugins {
 
 dependencies {
     implementation(libs.junit5)
+    implementation(libs.turtle)
+    implementation(libs.adam)
+    implementation(libs.coroutines)
+    implementation(libs.androidSdkLib)
+    implementation(libs.androidCommon)
     testImplementation(kotlin("test"))
 }
 
