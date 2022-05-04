@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "configuration.json",
+  "title": "vdm configuration",
+  "description": "configuration schema",
+  "type": "object",
+  "properties": {
+    "android": {
+      "description": "Android configuration",
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": ["count", "type"]
+    }
+  },
+  "required": ["android"]
+}
