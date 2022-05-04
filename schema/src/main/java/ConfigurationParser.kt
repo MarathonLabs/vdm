@@ -11,16 +11,17 @@ import java.nio.file.Path
  */
 
 class ConfigurationParser(private val schemaPath: Path) {
+    private val mapper = ObjectMapper(YAMLFactory()).registerModule(
+        KotlinModule.Builder().build()
+    )
+    private val factory =
+        JsonSchemaFactory
+            .builder(JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7))
+            .objectMapper(mapper)
+            .build()
+    private val schema = factory.getSchema(schemaPath.toUri())
+
     fun parse(data: String): Configuration {
-        val mapper = ObjectMapper(YAMLFactory()).registerModule(
-            KotlinModule.Builder().build()
-        )
-        val factory =
-            JsonSchemaFactory
-                .builder(JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7))
-                .objectMapper(mapper)
-                .build()
-        val schema = factory.getSchema(schemaPath.toUri())
         val readTree = mapper.readTree(data)
         val validate = schema.validate(readTree)
         if (validate.isNotEmpty()) {

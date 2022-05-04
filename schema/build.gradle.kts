@@ -35,7 +35,6 @@ configure<JSONSchemaCodegen> {
 
 dependencies {
     implementation(libs.jsonSchemaValidator)
-    implementation(libs.jsonKotlinShema)
     implementation(libs.jacksonYaml)
     implementation(libs.jacksonDatabind)
     implementation(libs.jacksonKotlin)
