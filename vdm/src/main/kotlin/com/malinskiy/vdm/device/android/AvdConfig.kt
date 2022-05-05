@@ -7,7 +7,7 @@ package com.malinskiy.vdm.device.android
 import com.android.sdklib.internal.avd.AvdInfo
 import com.malinskiy.vdm.device.Config
 
-class ConfigImpl(override val info: AvdInfo) : Config {
+class AvdConfig(override val info: AvdInfo) : Config {
 
     override fun toString(): String {
         return "Config(${info.toDebugString()})"

@@ -11,7 +11,7 @@ import com.malinskiy.vdm.device.Config
 import com.malinskiy.vdm.device.Id
 import com.malinskiy.vdm.device.VirtualDevice
 import com.malinskiy.vdm.device.android.AndroidVirtualDevice
-import com.malinskiy.vdm.device.android.ConfigImpl
+import com.malinskiy.vdm.device.android.AvdConfig
 
 class AndroidVirtualDeviceManager(
     private val avdManager: AvdManager,
@@ -19,12 +19,12 @@ class AndroidVirtualDeviceManager(
 
     override fun browse(): List<VirtualDevice> {
         return avdManager.allAvds.map {
-            AndroidVirtualDevice(ConfigImpl(it))
+            AndroidVirtualDevice(AvdConfig(it))
         }
     }
 
     override fun read(id: Id): VirtualDevice {
-        return AndroidVirtualDevice(ConfigImpl(avdManager.getAvd(id.name, false)))
+        return AndroidVirtualDevice(AvdConfig(avdManager.getAvd(id.name, false)))
     }
 
     override fun update(id: Id, updatedConfig: Config): VirtualDevice {
