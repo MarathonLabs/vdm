@@ -31,6 +31,10 @@ tasks.test {
 
 configure<JSONSchemaCodegen> {
     packageName.set("com.malinskiy.vdm")
+    inputs {
+        inputFile.set(file("${project.projectDir}/src/main/resources/schema"))
+    }
+    outputDir.set(file("${project.buildDir}/generated-sources/kotlin"))
 }
 
 dependencies {
