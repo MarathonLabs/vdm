@@ -5,7 +5,9 @@
 package com.malinskiy.vdm.android
 
 import com.malinskiy.vdm.android.interactor.DiscoverAndroidHomeInteractor
+import com.malinskiy.vdm.device.VirtualDevice
 import org.junit.jupiter.api.Test
+import org.opentest4j.TestAbortedException
 
 class AndroidVirtualDeviceManagerTest {
 
@@ -19,7 +21,7 @@ class AndroidVirtualDeviceManagerTest {
 
     @Test
     fun testRead() {
-        val firstDevice = manager.browse().first()
+        val firstDevice: VirtualDevice = manager.browse().firstOrNull() ?: throw TestAbortedException("No avd devices present. Ignoring test")
         val virtualDevice = manager.read(firstDevice.id)
         println(virtualDevice)
     }
