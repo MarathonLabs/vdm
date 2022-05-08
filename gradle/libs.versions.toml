@@ -6,7 +6,7 @@ kotlinApi = "1.5"
 junit5 = "5.8.1"
 coroutines = "1.6.0"
 androidTools = "30.1.3"
-
+jackson = "2.13.2"
 [libraries]
 junit5 = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
 turtle = { module = "com.lordcodes.turtle:turtle", version = "0.6.0" }
@@ -14,7 +14,11 @@ adam = { module = "com.malinskiy.adam:adam", version = "0.4.5" }
 coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
 androidSdkLib = { module = "com.android.tools:sdklib", version.ref = "androidTools"}
 androidCommon = { module = "com.android.tools:common", version.ref = "androidTools"}
-
+jacksonYaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson"}
+jacksonDatabind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson"}
+jacksonKotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson"}
+jsonSchemaValidator = { module = "com.networknt:json-schema-validator", version = "1.0.69"}
+jsonKotlinGradle = { module = "net.pwall.json:json-kotlin-gradle", version = "0.77"}
 [bundles]
 
 [plugins]
