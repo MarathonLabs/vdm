@@ -1,0 +1,68 @@
+{"0": {
+    "doc": "Home",
+    "title": "Vdm",
+    "content": "Virtual device manager (or vdm) is an abstraction interface for creating virtual devices (emulators/simulators) written in Kotlin . ",
+    "url": "https://marathonlabs.github.io/vdm/#vdm",
+    "relUrl": "/#vdm"
+  },"1": {
+    "doc": "Home",
+    "title": "Motivation",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/#motivation",
+    "relUrl": "/#motivation"
+  },"2": {
+    "doc": "Home",
+    "title": "Supported functionality",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/#supported-functionality",
+    "relUrl": "/#supported-functionality"
+  },"3": {
+    "doc": "Home",
+    "title": "Getting started",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/#getting-started",
+    "relUrl": "/#getting-started"
+  },"4": {
+    "doc": "Home",
+    "title": "Basic usage example",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/#basic-usage-example",
+    "relUrl": "/#basic-usage-example"
+  },"5": {
+    "doc": "Home",
+    "title": "About the project",
+    "content": "License . Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Contributing . ",
+    "url": "https://marathonlabs.github.io/vdm/#about-the-project",
+    "relUrl": "/#about-the-project"
+  },"6": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/",
+    "relUrl": "/"
+  },"7": {
+    "doc": "Android",
+    "title": "Working with Android emulators",
+    "content": ". | Working with Android emulators . | Creating an Android emulator | . | . ",
+    "url": "https://marathonlabs.github.io/vdm/docs/android/#working-with-android-emulators",
+    "relUrl": "/docs/android/#working-with-android-emulators"
+  },"8": {
+    "doc": "Android",
+    "title": "Creating an Android emulator",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/docs/android/#creating-an-android-emulator",
+    "relUrl": "/docs/android/#creating-an-android-emulator"
+  },"9": {
+    "doc": "Android",
+    "title": "Android",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/docs/android/",
+    "relUrl": "/docs/android/"
+  },"10": {
+    "doc": "1. Create an Android Emulator",
+    "title": "1. Create an Android Emulator",
+    "content": " ",
+    "url": "https://marathonlabs.github.io/vdm/tutorials/1-android/",
+    "relUrl": "/tutorials/1-android/"
+  }
+}
