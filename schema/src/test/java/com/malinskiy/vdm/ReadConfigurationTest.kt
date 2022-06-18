@@ -17,12 +17,13 @@ class ReadConfigurationTest {
 
     @Test
     fun testRead() {
-        val conf = "android:\n" +
-                "  count: 1\n" +
-                "  type: \"emulator\""
+        val conf = File(ReadConfigurationTest::class.java.getResource("/schema/sample-1.yaml").file).readText()
         val parse = ConfigurationParser(schema).parse(conf)
-        assertEquals(1, parse.android.count)
-        assertEquals("emulator", parse.android.type)
+        assertEquals(1, parse.android.size)
+        assertEquals("1.0.0", parse.apiVersion)
+        assertEquals(1, parse.android.first().count)
+        assertEquals("STELLAR_DEVICE", parse.android.first().name)
+        assertEquals(Configuration.Spec("android-30", listOf("default"), "x86_64"), parse.android.first().spec)
     }
 
     @Test

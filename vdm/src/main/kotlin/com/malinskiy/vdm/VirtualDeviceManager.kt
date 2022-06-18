@@ -12,7 +12,7 @@ interface VirtualDeviceManager {
     fun browse(): List<VirtualDevice>
     fun read(id: Id): VirtualDevice
     fun update(id: Id, updatedConfig: Config): VirtualDevice
-    fun add(config: Config): VirtualDevice
+    fun add(config: Config, override: Boolean = false): VirtualDevice
     fun delete(id: Id)
     fun start(id: Id, options: StartupOptions)
     fun stop(device: VirtualDevice)

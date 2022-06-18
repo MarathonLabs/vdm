@@ -3,21 +3,77 @@
   "$id": "configuration.json",
   "title": "vdm configuration",
   "description": "configuration schema",
-  "type": "object",
-  "properties": {
-    "android": {
-      "description": "Android configuration",
+  "$defs": {
+    "android-emulator-spec": {
       "type": "object",
       "properties": {
+        "apiLevel": {
+          "type": "string",
+          "description": "api revision number for released android versions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "default",
+              "android-wear",
+              "android-tv",
+              "google-tv",
+              "android-automotive",
+              "android-automotive-playstore",
+              "chromeos",
+              "google_apis",
+              "google_apis_playstore",
+              "google_apis_x86"
+            ]
+          }
+        },
+        "abi": {
+          "enum": [
+            "armeabi",
+            "armeabi-v7a",
+            "arm64-v8a",
+            "x86",
+            "x86_64",
+            "mips",
+            "mips64"
+          ],
+          "description": "The ABI of a platform's system image"
+        }
+      }
+    },
+    "android-emulator": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "[a-zA-Z0-9_-]+"
+        },
         "count": {
           "type": "integer"
         },
-        "type": {
-          "type": "string"
+        "spec": {
+          "$ref": "#/$defs/android-emulator-spec"
         }
-      },
-      "required": ["count", "type"]
+      }
     }
   },
-  "required": ["android"]
+  "type": "object",
+  "properties": {
+    "apiVersion": {
+      "description": "Defines the versioned schema",
+      "type": "string"
+    },
+    "android": {
+      "description": "Android configuration",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/android-emulator"
+      }
+    }
+  },
+  "required": [
+    "android",
+    "apiVersion"
+  ]
 }

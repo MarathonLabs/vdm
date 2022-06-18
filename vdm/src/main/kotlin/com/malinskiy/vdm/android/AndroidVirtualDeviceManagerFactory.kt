@@ -21,7 +21,8 @@ class AndroidVirtualDeviceManagerFactory(
         val androidHome = homeDirectory.execute() ?: throw RuntimeException("Unable to locate Android SDK")
         val sdkHandler = AndroidSdkHandler.getInstance(AndroidLocationsSingleton, androidHome.toPath())
         return AndroidVirtualDeviceManager(
-            avdManager = AvdManager.getInstance(sdkHandler, logger)
+            sdkHandler = sdkHandler,
+            logger = logger,
         )
     }
 }
